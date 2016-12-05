@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<title>газета.ru</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+    <h1><a href="https://www.gazeta.ru">газета.ru</a></h1>
+    <table>
+        <td>
+            <div class=metanav><a href="/search">Search for news</a></div>
+        </td>
+        <td>
+            <div class=metanav><a href="/define">Article type definition</a></div>
+        </td>
+    </table>
+    {% block body %}{% endblock %}
+</div>

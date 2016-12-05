@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+    {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+    
+    <form action="{{ url_for('define') }}" method=post>
+        <dl>
+            <dt>Text of article:</dt>
+            <dd><textarea rows="10" cols="55" name="text">  {% if text %}{{ text }}{% endif %}</textarea> </dd>
+            <dd><input type=submit align="right" value="Get type"></dd>
+        </dl>
+    </form>
+
+    {% block type %}{% endblock %}
+   
+{% endblock %}

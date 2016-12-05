@@ -1,0 +1,12 @@
+{% extends "define.html" %}
+{% block type %}
+    <ul class="entries">
+        {% if entries %}
+            {% for entry in entries %}
+                <dd><h2>{{ entry }}</h2></dd>
+            {% endfor %}
+        {% else %}
+            <li><em>Type hasn't been defined</em>
+        {% endif %}
+    </ul>
+{% endblock %}

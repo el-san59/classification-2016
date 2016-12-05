@@ -1,0 +1,8 @@
+$ cat .gitignore
+.idea/
+bd_chgk.json
+Excercises_5_6/gazeta_articles.csv
+Excercises_5_6/svc.model
+Excercises_5_6/tfidf.model
+Excercises_5_6/__pycache__/
+

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+    {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+
+    <form action="{{ url_for('search') }}" method=post>
+        <dl>
+            <dt>Your request:</dt>
+            <dd><input type=text name=request size="56" {% if search_request %} value="{{ search_request }}" {% endif %}>
+            <input type=submit align="right" value=Search></dd>
+        </dl>
+    </form>
+        {% block results %}{% endblock %}
+
+{% endblock %}

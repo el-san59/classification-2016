@@ -1,0 +1,12 @@
+{% extends "search.html" %}
+{% block results %}
+    <ul class="entries">
+        {% if entries %}
+            {% for entry in entries %}
+                <p><h2><a href="{{ entry.url }}">{{ entry.title }}</a></h2>{{ entry.text|safe }}
+            {% endfor %}
+        {% else %}
+            <li><em>The search has not given any results.</em>
+        {% endif %}
+    </ul>
+{% endblock %}
